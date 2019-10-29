@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+<h1>All Dogs waiting for Adoption</h1>
+<a class= "btn btn-info" href="/dogs/new">Add new dog for Adoption!</a>
+
+<div class="row" style="display:flex; flex-wrap:wrap;">
+<% dogs.forEach(function(dogs){ %>
+    <div class="col-md-2 col-sm-4">
+            <h3><%= dogs.name %></h3>
+        <div class="thumbnail">
+                <img src="<%= dogs.image %>" height="190" width="250">
+                <p>
+                    <a class="btn btn-success" href="/dogs/ <%=dogs._id%>">Click me!</a>
+                </p>
+        </div>
+    </div>        
+   
+<% });%>
+
+</div>
+
+<% include partials/footer %>

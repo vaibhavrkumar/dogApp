@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+<h1>Add a dog for adoption</h1>
+
+<form action="/dogs" method="POST">
+    <input type="text" name = "name"  placeholder="name">
+    <input type="text" name = "image" placeholder="image link">
+    <button>Submit</button>
+</form>
+
+<a href="/dogs">View all dogs currently listed</a>
+
+<% include partials/footer %>
